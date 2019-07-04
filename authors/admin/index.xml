@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LiangWu</title>
+    <link>https://leon-liangwu.github.io/authors/admin/</link>
+    <description>Recent content on LiangWu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    
+	    <atom:link href="https://leon-liangwu.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://leon-liangwu.github.io/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://leon-liangwu.github.io/authors/admin/</guid>
+      <description>&lt;p&gt;I am a first-year Ph.D. student at &lt;a href=&#34;https://www.ece.ust.hk/&#34; target=&#34;_blank&#34;&gt;the Department of Electronic and Computer Engineering&lt;/a&gt; in &lt;a href=&#34;https://www.ust.hk/&#34; target=&#34;_blank&#34;&gt;the Hong Kong University of Science and Technology&lt;/a&gt;, under the supervision of &lt;a href=&#34;https://eebert.home.ece.ust.hk/&#34; target=&#34;_blank&#34;&gt;Prof. Bert Shi&lt;/a&gt;. My current research interests focus on computer vision, machine learning and robotics. Previously, I receive my M.Phil. in &lt;a href=&#34;http://cs.nju.edu.cn/&#34; target=&#34;_blank&#34;&gt;Computer Science in Nanjing University&lt;/a&gt;, China. At that moment, my supervisor was &lt;a href=&#34;http://cs.nju.edu.cn/lutong/&#34; target=&#34;_blank&#34;&gt;Prof. Tong Lu&lt;/a&gt;, and my research mainly focused on text detection and recognition in images and videos.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

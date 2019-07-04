@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 on LiangWu</title>
+    <link>https://leon-liangwu.github.io/publication_types/2/</link>
+    <description>Recent content in 2 on LiangWu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://leon-liangwu.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fractals based multi-oriented text detection system for recognition in mobile video images</title>
+      <link>https://leon-liangwu.github.io/publication/shivakumara-2017-fractals/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://leon-liangwu.github.io/publication/shivakumara-2017-fractals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A new technique for multi-oriented scene text line detection and tracking in video</title>
+      <link>https://leon-liangwu.github.io/publication/wu-2015-new/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://leon-liangwu.github.io/publication/wu-2015-new/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
