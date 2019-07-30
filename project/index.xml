@@ -7,10 +7,124 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>{year} &amp;copy; Liang Wu</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://leon-liangwu.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mask YOLO</title>
+      <link>https://leon-liangwu.github.io/project/mask_yolo/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leon-liangwu.github.io/project/mask_yolo/</guid>
+      <description>
+
+&lt;h2 id=&#34;yolo-caffe-version-with-maskrcnn&#34;&gt;YOLO Caffe version with MaskRCNN&lt;/h2&gt;
+
+&lt;h3 id=&#34;caffe-maskyolo&#34;&gt;Caffe-MaskYolo&lt;/h3&gt;
+
+&lt;h4 id=&#34;what-i-add-in-this-version-of-caffe&#34;&gt;What I add in this version of caffe?&lt;/h4&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Demos for object detection, mask segmentation and keypoints recognition&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; YOLO v2 (RegionLossLayer) and v3 (YoloLossLayer) are supported&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Instance Mask segmentation with Yolo&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Keypoints Recognition with yolo&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; training data preparation and training&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;preparation&#34;&gt;preparation&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;# clone
+git clone https://github.com/leon-liangwu/MaskYolo_Caffe.git --recursive
+
+# install requirements
+cd ROOT_MaskYolo
+pip install -r requirements.txt
+
+# compile box_utils
+cd lib/box_utils
+python setup.py build_ext --inplace
+
+# compile caffe
+cd caffe-maskyolo
+cp Makefile.config.example Makefile.config
+make -j
+make pycaffe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;download-pretrained-models&#34;&gt;download pretrained models&lt;/h4&gt;
+
+&lt;p&gt;Click &lt;a href=&#34;https://www.dropbox.com/s/z1w2z8ya28v3lah/models.tgz?dl=0&#34; title=&#34;pretrained models&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to download pretrained models&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ROOT_MaskYolo
+tar zxvf /your/downlaod/model/path/models.tgz ./
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;object-detection-with-yolo&#34;&gt;Object Detection with YOLO&lt;/h3&gt;
+
+&lt;p&gt;support to use yolo v2 or v3 to detect objects in images&lt;/p&gt;
+
+&lt;h4 id=&#34;objection-demo&#34;&gt;objection demo&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;cd tools
+python yolo_inference.py [--img_path=xxx.jpg] [--model=xxx.prototxt] [--weights=xxx.caffemodel]
+# Net forward time consumed: 3.96ms
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The demo result is shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;assets/detection1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;train-for-object-detection&#34;&gt;train for object detection&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ROOT_MaskYolo
+sh ./scripts/convert_detection.sh  #generate lmdb for detection
+cd ./models/mobilenetv2-yolo/
+nohup sh yolo_train.sh &amp;gt; train.log &amp;amp;
+tail -f train.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;instance-mask-and-keypoints&#34;&gt;Instance Mask and Keypoints&lt;/h3&gt;
+
+&lt;h4 id=&#34;instance-mask-and-keypoints-demo&#34;&gt;instance mask and keypoints demo&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;cd tools
+python mask_inference.py [--img_path=xxx.jpg] [--model=xxx.prototxt] [--weights=xxx.caffemodel] 
+# Net forward time consumed: 8.67ms
+
+python kps_inference.py [--img_path=xxx.jpg] [--model=xxx.prototxt] [--weights=xxx.caffemodel] 
+# Net forward time consumed: 5.58ms
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;some resulting samples are show below.
+I just feed yolo results to &lt;code&gt;roi_pooing&lt;/code&gt; or &lt;code&gt;roi_alignment&lt;/code&gt; layer.&lt;/p&gt;
+
+&lt;!--
+![](assets/mask_keypoints.png)
+--&gt;
+
+&lt;h4 id=&#34;prepare-lmdb-for-mask-regression&#34;&gt;prepare lmdb for mask regression&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;coming soon
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You Only Look Once: Unified, Real-Time Object detection &lt;a href=&#34;http://arxiv.org/abs/1506.02640&#34; target=&#34;_blank&#34;&gt;http://arxiv.org/abs/1506.02640&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;YOLO9000: Better, Faster, Stronger &lt;a href=&#34;https://arxiv.org/abs/1612.08242&#34; target=&#34;_blank&#34;&gt;https://arxiv.org/abs/1612.08242&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;YOLOv3: An Incremental Improvement &lt;a href=&#34;https://pjreddie.com/media/files/papers/YOLOv3.pdf&#34; target=&#34;_blank&#34;&gt;https://pjreddie.com/media/files/papers/YOLOv3.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks&lt;/p&gt;
+
+&lt;p&gt;Mask R-CNN&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>Internal Project</title>
