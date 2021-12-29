@@ -1,29 +1,48 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
+<html>
+
+<head>
+<title>{{ site.title }}</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div height="40" id="header" style="background-color:#502deb; color: #502deb">
+      <center>
+        <table width="80%" height="40" border="0">
+          <tr>
+		<td halign="center">
+			<p align="center"><font size="6"><font color=#FFFFFF>{{ site.name }}</font> </p>
+		</td>
+	</tr>
+        </table>
+      </center>
+    </div>
+	
+	
+	<nav class="nav">
+		<center>
+			<img src="files/protal_liang.JPG" style="height:200px;"></a>
+		</center>
+		<ul class="fa-ul">
+			<li><i class="fa-li fa fa-envelope"></i>
+				<a href="mailto:liang.wu@connect.ust.hk" style="text-decoration: none">Email</a>
+			</li>
 			
-			{{ content }}
+			<li><i class="fa-li fa fa-github"></i>
+				<a href="https://github.com/leon-liangwu" style="text-decoration: none">Github</a>
+			</li>
 			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:liang.wu@connect.ust.hk>email</a></li>
-	        		<li><a href="https://github.com/leon-liangwu">github</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+			<li><i class="fa-li fa fa-book"></i>
+				<a href="https://scholar.google.com/citations?user=txk_odoAAAAJ&hl=en" style="text-decoration: none">Google Scholar</a>
+			</li>
+			
+			<li><i class="fa-li fa fa-book"></i><a href="https://www.linkedin.com/in/leon-liangwu/">LinkedIn</a>
+			</li>
+		</ul>
+	</nav>
+
+	{{ content }}
+</body>
+</html> 

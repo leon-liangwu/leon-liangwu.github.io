@@ -1,43 +1,32 @@
 body {
-    margin: 50px auto;
-    width: 70%;
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding-left: 10%;
+    padding-right: 10%;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+
+header {
+    border-bottom: 1px solid gray;
+    text-align: center;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+
+nav {
+    float: left;
+    padding-top: 3%;
+    display: block;
 }
-a {
+
+article {
+    overflow: hidden;
+    padding-left: 8%;
+}
+
+a:link, a:visited {
+    color: #047DF2;/*#2da38d;#356d63;#3a8c7d;*/
     text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
+strong {
+font-family: Lora;
+font-size: 16px;
+font-weight: 600;
 }

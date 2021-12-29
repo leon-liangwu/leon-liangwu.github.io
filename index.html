@@ -1,237 +1,154 @@
 ---
 # this is an empty front matter
+layout: default
 ---
-<!DOCTYPE html>
-<html>
 
-<head>
-<title>{{ site.title }}</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-	body {
-		font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-		padding-left: 10%;
-		padding-right: 10%;
-	}
+<article class="article">
+	<h1>About Me</h1>
+	<p> 
+		I am a first-year Ph.D. student at the Department of Electronic and Computer Engineering in the Hong Kong University of Science and Technology, under the supervision of <a href="https://eebert.home.ece.ust.hk/">Prof. Bert Shi</a>. 
+		My current research interests focus on computer vision, machine learning and robotics. Previously, I receive my M.Phil. in Computer Science in Nanjing University, China. 
+		At that moment, my supervisor was <a href="https://cs.nju.edu.cn/lutong/">Prof. Tong Lu</a>, and my research mainly focused on text detection and recognition in images and videos.
+	</p>
+	
+	<p><i> * Computer Vision; Machine Learning; Robotics </p>
+	
+	
 
-	header {
-		border-bottom: 1px solid gray;
-		text-align: center;
-	}
+	<h1>News</h1>
+	<p>06/2020: I advanced to candidacy.
+	<p>09/2019: I started my Ph.D. life at HKUST. 
+		
+	<h1>Publication</h1>
 
-	nav {
-	    float: left;
-	    padding-top: 3%;
-	    display: block;
-	}
+	<!-- links -->
+	<!-- 
+	<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>
 
-	article {
-		overflow: hidden;
-		padding-left: 8%;
-	}
+	<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>
+	<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>
+	<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
 
-	a:link, a:visited {
-		color: #047DF2;/*#2da38d;#356d63;#3a8c7d;*/
-		text-decoration: none;
-	}
+	<a href="https://eebert.home.ece.ust.hk/", style="color : #000000;">Bertram Shi</a>
+	<a href="https://scholar.google.com.hk/citations?user=sM_MNbgAAAAJ&hl=en", style="color : #000000;">Didan Deng</a>
+	-->
 
-	strong {
-	font-family: Lora;
-	font-size: 16px;
-	font-weight: 600;
-}
-
-</style>
-</head>
-
-<body>
-    <div height="40" id="header" style="background-color:#502deb; color: #502deb">
-      <center>
-        <table width="80%" height="40" border="0">
-          <tr>
-		<td halign="center">
-			<p align="center"><font size="6"><font color=#FFFFFF>{{ site.name }}</font> </p>
+	<table width="100%" border="0" align="top" cellpadding="10">
+		<tr>
+		<td width="20%" valign="center">
+		<img src="files/2021-2/paper.png" alt="Topics" width="100%" class="border">
 		</td>
-	</tr>
-        </table>
-      </center>
-    </div>
-	
-	
-<!-- 	<header class="header">
-	  <h1>Lifeng Fan (范丽凤)</h1>
-	</header> -->
-
-	<nav class="nav">
-		<center>
-<!-- 			<a href="map.html"> -->
-			<img src="files/protal_liang.JPG" style="height:200px;"></a>
-		</center>
-		<ul class="fa-ul">
-			<li><i class="fa-li fa fa-envelope"></i>
-				<a href="mailto:liang.wu@connect.ust.hk" style="text-decoration: none">Email</a>
-			</li>
-			
-			<li><i class="fa-li fa fa-github"></i>
-				<a href="https://github.com/leon-liangwu" style="text-decoration: none">Github</a>
-			</li>
-			
-			<li><i class="fa-li fa fa-book"></i>
-				<a href="https://scholar.google.com/citations?user=txk_odoAAAAJ&hl=en" style="text-decoration: none">Google Scholar</a>
-			</li>
-			
-			<li><i class="fa-li fa fa-book"></i><a href="https://www.linkedin.com/in/leon-liangwu/">LinkedIn</a>
-			</li>
-		</ul>
-	</nav>
-
-	<article class="article">
-		<h1>About Me</h1>
-		<p> 
-			I am a first-year Ph.D. student at the Department of Electronic and Computer Engineering in the Hong Kong University of Science and Technology, under the supervision of <a href="https://eebert.home.ece.ust.hk/">Prof. Bert Shi</a>. 
-			My current research interests focus on computer vision, machine learning and robotics. Previously, I receive my M.Phil. in Computer Science in Nanjing University, China. 
-			At that moment, my supervisor was <a href="https://cs.nju.edu.cn/lutong/">Prof. Tong Lu</a>, and my research mainly focused on text detection and recognition in images and videos.
-		</p>
-		
-		<p><i> * Computer Vision; Machine Learning; Robotics </p>
-		
-		
-
-		<h1>News</h1>
-		<p>06/2020: I advanced to candidacy.
-		<p>09/2019: I started my Ph.D. life at HKUST. 
-			
-		<h1>Publication</h1>
-	
-		<!-- links -->
-		<!-- 
-		<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>
-
-		<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>
-		<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>
-		<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
-
+		<td width="80%" valign="center">
+		<papertitle>A multimodal direct gaze interface for wheelchairs and teleoperated robots</papertitle><br/>
+		<a href="https://scholar.google.com/citations?user=VfCbBg8AAAAJ&hl=en", style="color : #000000;">Isamu Poy</a>*,
+		<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>*,
 		<a href="https://eebert.home.ece.ust.hk/", style="color : #000000;">Bertram Shi</a>
-		<a href="https://scholar.google.com.hk/citations?user=sM_MNbgAAAAJ&hl=en", style="color : #000000;">Didan Deng</a>
-		-->
+		</b><br/>
+		* Equal contributions  <br />
+		the 43rd Annual International Conference of the IEEE Engineering in Medicine \& Biology Society (EMBC), 2021. <br/>
+		<a href="files/2021-2/paper.pdf">Paper</a> /
+		<a href="https://github.com/HKUST-NISL/GazeVehicle">Project</a> /
+		<a href="files/2012-2/paper.bib">Bibtex</a>  <br />
+		</td>
+		</tr>
+		</table>
 
-		<table width="100%" border="0" align="top" cellpadding="10">
-			<tr>
-			<td width="20%" valign="center">
-			<img src="files/2021-2/paper.png" alt="Topics" width="100%" class="border">
-			</td>
-			<td width="80%" valign="center">
-			<papertitle>A multimodal direct gaze interface for wheelchairs and teleoperated robots</papertitle><br/>
-			<a href="https://scholar.google.com/citations?user=VfCbBg8AAAAJ&hl=en", style="color : #000000;">Isamu Poy</a>*,
-			<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>*,
-			<a href="https://eebert.home.ece.ust.hk/", style="color : #000000;">Bertram Shi</a>
-			</b><br/>
-			* Equal contributions  <br />
-			the 43rd Annual International Conference of the IEEE Engineering in Medicine \& Biology Society (EMBC), 2021. <br/>
-			<a href="files/2021-2/paper.pdf">Paper</a> /
-			<a href="https://github.com/HKUST-NISL/GazeVehicle">Project</a> /
-			<a href="files/2012-2/paper.bib">Bibtex</a>  <br />
-			</td>
-			</tr>
-		 </table>
+	<table width="100%" border="0" align="top" cellpadding="10">
+		<tr>
+		<td width="20%" valign="center">
+		<img src="files/2021-1/paper.png" alt="Topics" width="100%" class="border">
+		</td>
+		<td width="80%" valign="center">
+		<papertitle>Iterative Distillation for Better Uncertainty Estimates in Multitask Emotion Recognition</papertitle><br/>
+		<a href="https://scholar.google.com.hk/citations?user=sM_MNbgAAAAJ&hl=en", style="color : #000000;">Didan Deng</a>,
+		<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>,
+		<a href="https://eebert.home.ece.ust.hk/", style="color : #000000;">Bertram Shi</a>
+		</b><br/>
+		Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021. <br/>
+		<a href="files/2021-1/paper.pdf">Paper</a> /
+		<a href="https://github.com/HKUST-NISL/Multitask-Emotion-Recognition-with-Incomplete-Labels">Project</a> /
+		<a href="files/2021-1/paper.bib">Bibtex</a>  <br />
+		</td>
+		</tr>
+		</table>
 
-		<table width="100%" border="0" align="top" cellpadding="10">
-			<tr>
-			<td width="20%" valign="center">
-			<img src="files/2021-1/paper.png" alt="Topics" width="100%" class="border">
-			</td>
-			<td width="80%" valign="center">
-			<papertitle>Iterative Distillation for Better Uncertainty Estimates in Multitask Emotion Recognition</papertitle><br/>
-			<a href="https://scholar.google.com.hk/citations?user=sM_MNbgAAAAJ&hl=en", style="color : #000000;">Didan Deng</a>,
-			<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>,
-			<a href="https://eebert.home.ece.ust.hk/", style="color : #000000;">Bertram Shi</a>
-			</b><br/>
-			Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021. <br/>
-			<a href="files/2021-1/paper.pdf">Paper</a> /
-			<a href="https://github.com/HKUST-NISL/Multitask-Emotion-Recognition-with-Incomplete-Labels">Project</a> /
-			<a href="files/2021-1/paper.bib">Bibtex</a>  <br />
-			</td>
-			</tr>
-		 </table>
+	<table width="100%" border="0" align="top" cellpadding="10">
+		<tr>
+		<td width="20%" valign="center">
+		<img src="files/2017-1/paper.png" alt="Topics" width="100%" class="border">
+		</td>
+		<td width="80%" valign="center">
+		<papertitle>A new technique for multi-oriented scene text line detection and tracking in video</papertitle><br/>
+		<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>,
+		<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>,
+		<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>,
+		<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
+		</b><br/>
+		Pattern Recognition, 2017. <br/>
+		<a href="files/2017-1/paper.pdf">Paper</a> /
+		<a href="files/2017-1/paper.bib">Bibtex</a>  <br />
+		</td>
+		</tr>
+		</table>
 
-		<table width="100%" border="0" align="top" cellpadding="10">
-			<tr>
-			<td width="20%" valign="center">
-			<img src="files/2017-1/paper.png" alt="Topics" width="100%" class="border">
-			</td>
-			<td width="80%" valign="center">
-			<papertitle>A new technique for multi-oriented scene text line detection and tracking in video</papertitle><br/>
-			<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>,
-			<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>,
-			<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>,
-			<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
-			</b><br/>
-			Pattern Recognition, 2017. <br/>
-			<a href="files/2017-1/paper.pdf">Paper</a> /
-			<a href="files/2017-1/paper.bib">Bibtex</a>  <br />
-			</td>
-			</tr>
-		 </table>
+	<table width="100%" border="0" align="top" cellpadding="10">
+		<tr>
+		<td width="20%" valign="center">
+		<img src="files/2015-1/paper.png" alt="Topics" width="100%" class="border">
+		</td>
+		<td width="80%" valign="center">
+		<papertitle>A new technique for multi-oriented scene text line detection and tracking in video</papertitle><br/>
+		<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>,
+		<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>,
+		<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>,
+		<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
+		</b><br/>
+		IEEE Transactions on multimedia, 2015. <br/>
+		<a href="files/2015-1/paper.pdf">Paper</a> /
+		<a href="files/2015-1/paper.bib">Bibtex</a>  <br />
+		</td>
+		</tr>
+		</table>
 
-		<table width="100%" border="0" align="top" cellpadding="10">
-			<tr>
-			<td width="20%" valign="center">
-			<img src="files/2015-1/paper.png" alt="Topics" width="100%" class="border">
-			</td>
-			<td width="80%" valign="center">
-			<papertitle>A new technique for multi-oriented scene text line detection and tracking in video</papertitle><br/>
-			<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>,
-			<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>,
-			<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>,
-			<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
-			</b><br/>
-			IEEE Transactions on multimedia, 2015. <br/>
-			<a href="files/2015-1/paper.pdf">Paper</a> /
-			<a href="files/2015-1/paper.bib">Bibtex</a>  <br />
-			</td>
-			</tr>
-		 </table>
-
-		<table width="100%" border="0" align="top" cellpadding="10">
-			<tr>
-			<td width="20%" valign="center">
-			<img src="files/2014-2/paper.png" alt="Topics" width="100%" class="border">
-			</td>
-			<td width="80%" valign="center">
-			<papertitle>Anomaly detection through spatio-temporal context modeling in crowded scenes</papertitle><br/>
-			<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>,
-			<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>, Xiaolin Ma,
-			<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>,
-			<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
-			</b><br/>
-			the 22nd International Conference on Pattern Recognition, 2014. <br/>
-			<a href="files/2014-2/paper.pdf">Paper</a> /
-			<a href="files/2014-2/paper.bib">Bibtex</a>  <br />
-			</td>
-			</tr>
-		 </table>
+	<table width="100%" border="0" align="top" cellpadding="10">
+		<tr>
+		<td width="20%" valign="center">
+		<img src="files/2014-2/paper.png" alt="Topics" width="100%" class="border">
+		</td>
+		<td width="80%" valign="center">
+		<papertitle>Anomaly detection through spatio-temporal context modeling in crowded scenes</papertitle><br/>
+		<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>,
+		<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>, Xiaolin Ma,
+		<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>,
+		<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
+		</b><br/>
+		the 22nd International Conference on Pattern Recognition, 2014. <br/>
+		<a href="files/2014-2/paper.pdf">Paper</a> /
+		<a href="files/2014-2/paper.bib">Bibtex</a>  <br />
+		</td>
+		</tr>
+		</table>
 
 
-		<table width="100%" border="0" align="top" cellpadding="10">
-			<tr>
-			<td width="20%" valign="center">
-			<img src="files/2014-1/paper.png" alt="Topics" width="100%" class="border">
-			</td>
-			<td width="80%" valign="center">
-			<papertitle>Text detection using delaunay triangulation in video sequence</papertitle><br/>
-			<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>,
-			<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>,
-			<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>,
-			<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
-			</b><br/>
-			the 11th IAPR International Workshop on Document Analysis Systems, 2014. <br/>
-			(<font>Best Student Paper Normination</font>) <br/>
-			<a href="files/2014-1/paper.pdf">Paper</a> /
-			<a href="files/2014-1/paper.bib">Bibtex</a>  <br />
-			</td>
-			</tr>
-		 </table>
-			
-	</article>
-</body>
-</html> 
+	<table width="100%" border="0" align="top" cellpadding="10">
+		<tr>
+		<td width="20%" valign="center">
+		<img src="files/2014-1/paper.png" alt="Topics" width="100%" class="border">
+		</td>
+		<td width="80%" valign="center">
+		<papertitle>Text detection using delaunay triangulation in video sequence</papertitle><br/>
+		<a href="https://leon-liangwu.github.io/", style="color : #000000;"><strong>Liang Wu</strong></a>,
+		<a href="https://scholar.google.com/citations?user=XfpbOc4AAAAJ&hl=en", style="color : #000000;">Palaiahnakote Shivakumara</a>,
+		<a href="https://cs.nju.edu.cn/lutong/", style="color : #000000;">Tong Lu</a>,
+		<a href="https://scholar.google.com/citations?user=nmFSOaEAAAAJ&hl=en", style="color : #000000;">Chew Lim Tan</a>
+		</b><br/>
+		the 11th IAPR International Workshop on Document Analysis Systems, 2014. <br/>
+		(<font>Best Student Paper Normination</font>) <br/>
+		<a href="files/2014-1/paper.pdf">Paper</a> /
+		<a href="files/2014-1/paper.bib">Bibtex</a>  <br />
+		</td>
+		</tr>
+		</table>
+		
+</article>
+
