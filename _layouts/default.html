@@ -1,51 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<title>{{ site.title }}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.title }} · AI Engineer & Quant Developer</title>
+<meta name="description" content="Liang (Leon) Wu — AI engineer & quantitative developer. Deep learning, agentic LLM systems, and trading infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <div height="40" id="header" style="background-color:#502deb; color: #502deb">
-      <center>
-        <table width="80%" height="40" border="0">
-          <tr>
-		<td halign="center">
-			<p align="center"><font size="6"><font color=#FFFFFF>{{ site.name }}</font> </p>
-		</td>
-	</tr>
-        </table>
-      </center>
-    </div>
-	
-	
-	<nav class="nav">
-		<center>
-			<img src="files/protal_liang.JPG" style="height:200px;"></a>
-		</center>
-		<ul class="fa-ul">
-			<li><i class="fa-li fa fa-envelope"></i>
-				<a href="mailto:liang.wu@connect.ust.hk" style="text-decoration: none">Email</a>
-			</li>
-			
-			<li><i class="fa-li fa fa-github"></i>
-				<a href="https://github.com/leon-liangwu" style="text-decoration: none">Github</a>
-			</li>
+	<header class="topbar">
+		<div class="topbar-inner">
+			<a class="brand" href="#top">Liang Wu</a>
+			<nav class="nav">
+				<a href="#projects">Projects</a>
+				<a href="#experience">Experience</a>
+				<a href="#research">Research</a>
+				<a href="#publications">Publications</a>
+				<a href="#education">Education</a>
+			</nav>
+		</div>
+	</header>
 
-			<li><i class="fa-li fa fa-book"></i>
-				<a href="https://scholar.google.com/citations?user=txk_odoAAAAJ&hl=en" style="text-decoration: none">Google Scholar</a>
-			</li>
+	<main id="top" class="container">
+		{{ content }}
+	</main>
 
-			<li><i class="fa-li fa fa-linkedin"></i>
-				<a href="https://www.linkedin.com/in/leon-liangwu/">LinkedIn</a>
-			</li>
-			
-		</ul>
-	</nav>
-
-	{{ content }}
-
+	<footer class="footer">
+		<div class="container">
+			<span class="dim">Built with Jekyll · Hosted on GitHub Pages</span>
+			<span class="dim">© {{ site.time | date: '%Y' }} Liang Wu</span>
+		</div>
+	</footer>
 </body>
-</html> 
+</html>
