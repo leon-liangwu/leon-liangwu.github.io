@@ -212,6 +212,28 @@ section { padding: 36px 0 8px; }
 .awards li { margin: 4px 0; }
 .awards .year { display: inline-block; width: 48px; color: var(--dim); font-variant-numeric: tabular-nums; }
 
+/* ---------- lightbox ---------- */
+.shots a { cursor: zoom-in; }
+.lightbox {
+    border: none; padding: 0; background: transparent;
+    max-width: 94vw; max-height: 92vh; overflow: visible;
+}
+.lightbox::backdrop { background: rgba(10, 12, 16, 0.78); }
+.lightbox img {
+    display: block; max-width: 94vw; max-height: 92vh; object-fit: contain;
+    border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45); background: #fff;
+}
+.lightbox-close {
+    position: absolute; top: -14px; right: -14px; width: 36px; height: 36px;
+    border-radius: 50%; border: none; cursor: pointer;
+    background: #fff; color: #111827; font-size: 22px; line-height: 36px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.lightbox-close:hover { background: #f1f4f8; }
+@media (max-width: 820px) {
+    .lightbox-close { top: 8px; right: 8px; }
+}
+
 /* ---------- footer ---------- */
 .footer { margin-top: 48px; border-top: 1px solid var(--border); padding: 20px 0 28px; font-size: 13px; }
 .footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }

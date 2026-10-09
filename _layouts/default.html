@@ -37,5 +37,28 @@
 			<span class="dim">© {{ site.time | date: '%Y' }} Liang Wu</span>
 		</div>
 	</footer>
+
+	<dialog class="lightbox" id="lightbox" aria-label="Image preview">
+		<button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+		<img alt="">
+	</dialog>
+	<script>
+	(function () {
+		var box = document.getElementById('lightbox');
+		var img = box.querySelector('img');
+		document.querySelectorAll('.shots a').forEach(function (a) {
+			a.addEventListener('click', function (e) {
+				e.preventDefault();
+				var thumb = a.querySelector('img');
+				img.src = a.getAttribute('href');
+				img.alt = thumb ? thumb.alt : '';
+				box.showModal();
+			});
+		});
+		box.querySelector('.lightbox-close').addEventListener('click', function () { box.close(); });
+		box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+		box.addEventListener('close', function () { img.removeAttribute('src'); });
+	})();
+	</script>
 </body>
 </html>

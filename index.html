@@ -58,19 +58,14 @@ layout: default
 		<div class="card wide">
 			<h3><i class="fa fa-area-chart"></i>A-Share Live Trading System</h3>
 			<div class="meta">China A-share quantitative trading system · personal · live since 2026-06</div>
-			<div class="stats">
-				<div class="stat"><span class="v green">+4.00%</span><span class="l">strategy</span></div>
-				<div class="stat"><span class="v red">−2.92%</span><span class="l">SSE Composite</span></div>
-				<div class="stat"><span class="v red">−7.21%</span><span class="l">CSI 300</span></div>
-				<div class="stat"><span class="v red">−15.81%</span><span class="l">ChiNext</span></div>
-				<div class="stat"><span class="v amber">−13.41%</span><span class="l">max drawdown</span></div>
-			</div>
-			<div class="stat-note">live account, 2026-06-01 → 2026-09-21</div>
 			<ul>
 				<li><b>Daily automated pipeline</b>: a scheduler pulls TuShare data before the open (07:00), runs stock screening and position sizing, and writes the day's trading plan.</li>
 				<li><b>Configurable screening &amp; sizing</b>: number of holdings, PE and market-cap floors, sort order; total-capital, cap-ratio and cash-ratio sizing, with manual overrides.</li>
 				<li><b>Performance analytics GUI</b>: interactive equity &amp; return curve against SSE Composite, CSI 300 and ChiNext, with max-drawdown highlighting and daily P/L inspection.</li>
 			</ul>
+			<div class="shots single">
+				<a href="files/projects/a-share-live-curve.webp"><img src="files/projects/a-share-live-curve.webp" alt="Trading Plan GUI: live equity and return curve against SSE Composite, CSI 300 and ChiNext" loading="lazy"></a>
+			</div>
 			<div class="tags">
 				<span class="tag">Python</span><span class="tag fin">TuShare</span><span class="tag fin">A-shares</span><span class="tag fin">position sizing</span><span class="tag">scheduler</span><span class="tag">matplotlib</span>
 			</div>
@@ -79,13 +74,6 @@ layout: default
 		<div class="card wide">
 			<h3><i class="fa fa-database"></i>Stock Backtesting Platform</h3>
 			<div class="meta">A-share market data &amp; backtesting web platform · personal · 2025 – present</div>
-			<div class="stats">
-				<div class="stat"><span class="v green">+1101%</span><span class="l">total return</span></div>
-				<div class="stat"><span class="v green">49.8%</span><span class="l">annualized</span></div>
-				<div class="stat"><span class="v cyan">1.73</span><span class="l">Sharpe ratio</span></div>
-				<div class="stat"><span class="v amber">−34.9%</span><span class="l">max drawdown</span></div>
-				<div class="stat"><span class="v">11,438</span><span class="l">trades</span></div>
-			</div>
 			<div class="stat-note">backtest · 2020-01 → 2026-03 · 1,489 trading days × 4,581 stocks · net of fees · CSI 300 benchmark</div>
 			<ul>
 				<li><b>Data layer</b>: TuShare, AKShare and yfinance normalized into MySQL, with a cached full-market panel (~1.3 GB) that loads in seconds for repeated experiments.</li>
