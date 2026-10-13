@@ -208,9 +208,13 @@ section { padding: 36px 0 8px; }
 .pub .actions a { border: 1px solid var(--border); border-radius: 6px; padding: 1px 10px; color: var(--text); }
 .pub .actions a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
-.awards { font-size: 14px; padding-left: 0; list-style: none; }
-.awards li { margin: 4px 0; }
-.awards .year { display: inline-block; width: 48px; color: var(--dim); font-variant-numeric: tabular-nums; }
+.hobbies { display: flex; flex-wrap: wrap; gap: 10px; }
+.hobby {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500;
+    padding: 8px 16px; border-radius: 999px; color: var(--text-strong);
+    background: var(--bg-elev); border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.hobby .fa { color: var(--accent); }
 
 /* ---------- lightbox ---------- */
 .shots a { cursor: zoom-in; }
