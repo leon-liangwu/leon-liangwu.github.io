@@ -215,6 +215,7 @@ section { padding: 36px 0 8px; }
     background: var(--bg-elev); border: 1px solid var(--border); box-shadow: var(--shadow);
 }
 .hobby .fa { color: var(--accent); }
+.hobby .ico { width: 16px; height: 16px; color: var(--accent); flex: none; }
 
 /* ---------- lightbox ---------- */
 .shots a { cursor: zoom-in; }
